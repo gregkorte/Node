@@ -1,0 +1,15 @@
+{
+  "name": "chalk-flag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "flag.js",
+  "dependencies": {
+    "chalk": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -30,7 +30,6 @@
 //     str += `What does that spell?\n${obj.name}!`
 //     return str;
 // }
-
 // BONUS: PRINT WITH DELAY BY LINE
 
 const prompt = require('prompt');
@@ -44,7 +43,6 @@ onErr = (err) => {
     console.log(err);
     return 1;
 }
-// console.log(name);
 
 cheer = (name) => giveMeA(name);
 
@@ -62,7 +60,10 @@ giveMeA = (name) => {
         }
         counter++;
     });
-    printIt(`What's that spell?\n`, obj.name, counter);
+    printIt(`What's that spell?\n`, obj.name, counter++);
+    printIt(`What's that spell?\n`, obj.name, counter++);
+    printIt(`What's that spell?\n`, obj.name, counter++);
+    printIt(`What's that spell?\n`, obj.name, counter++);
 };
 
 printIt = (intro, letter, counter) => setTimeout(()=>{console.log(`${intro}${letter}!\n`)}, counter*1000);

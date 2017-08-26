@@ -1,0 +1,3 @@
+#!/usr/local/bin/node
+
+const diceroll = require('../lib/cli.js');

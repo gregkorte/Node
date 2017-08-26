@@ -1,0 +1,10 @@
+{
+    "employees":[
+        { "id": 1, "firstName": "Phil", "lastName": "Troupe", "jobTitle": "CEO", "address": "123 Trow Way", "salary": 200000},
+        { "id": 2, "firstName": "Mary", "lastName": "Mayeye", "jobTitle": "CIO", "address": "123 Trow Way", "salary": 200000},
+        { "id": 3, "firstName": "Bob", "lastName": "Ersop", "jobTitle": "CTO", "address": "56789 Main Dr", "salary": 200000},
+        { "id": 4, "firstName": "Jonesie", "lastName": "Cat", "jobTitle": "CBO", "address": "78 Rt 1", "salary": 200000},
+        { "id": 5, "firstName": "Rat", "lastName": "Tread", "jobTitle": "CRO", "address": "928 Teller Ave", "salary": 200000},
+        { "id": 6, "firstName": "Chibs", "lastName": "Scot", "jobTitle": "SAM", "address": "98 Morrow Ln", "salary": 200000}
+    ]
+}

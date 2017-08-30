@@ -2,7 +2,6 @@
 
 // This function should return a random integer inclusive of the lower bound and the upper bound.
 const randomInt = (min, max) => {
-    console.log('randomInt', min, max)
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 

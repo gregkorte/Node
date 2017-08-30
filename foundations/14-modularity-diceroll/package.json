@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "diceroll": "bin/diceroll"
+    "diceroll": "./bin/diceroll"
   },
-  "main": "lib/cli.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

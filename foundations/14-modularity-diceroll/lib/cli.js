@@ -9,4 +9,4 @@ const { roll, toDiceNotation } = require('./dice');
 const dice = toDiceNotation({count, sides});
 const total = roll(dice);
 
-console.log(total);
+console.log(`Your ${count}d${sides} roll is ${total}`);

@@ -1,0 +1,19 @@
+{
+  "name": "14-modularity-diceroll",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "diceroll": "bin/diceroll"
+  },
+  "main": "lib/cli.js",
+  "scripts": {
+    "test": "mocha --recursive --watch -R list"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  }
+}

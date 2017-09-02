@@ -1,17 +1,17 @@
 {
     "children": [
         {
-            "name": "Tommy",
+            "child": "Tommy",
             "toy": "Gun",
             "delivered": false
         },
         {
-            "name": "Annan",
+            "child": "Annan",
             "toy": "Dolly",
             "delivered": false
         },
         {
-            "name": "Roger",
+            "child": "Roger",
             "toy": "Pig",
             "delivered": false
         }

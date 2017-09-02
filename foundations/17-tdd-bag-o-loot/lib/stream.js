@@ -20,6 +20,7 @@ writeStream._write = (json, _, next) => {
 };
 
 const addToy = (obj) => {
+    console.log('addToy running');
     readStream
     .pipe(addTo(obj))
     .pipe(writeStream)
@@ -29,12 +30,24 @@ const addToy = (obj) => {
 };
 
 // deleteFromWriteStream._write = (buffer, _, next) => {
-//     appendFile('../data/bagOloot.json', buffer, (err) => {
+//     let newFile = JSON.parse(json);
+//     let prettified = JSON.stringify(newFile, null, "\t");
+//     writeFile('./data/bagOloot.json', prettified, (err) => {
 //         if(err) throw err;
-//         console.log('The data to write was removed from the file.');
+//         console.log('The data to write was added to the file.');
 //     });
 //     next();
 // };
+
+const deleteToy = (name) => {
+    console.log('deleteToy running');
+    readStream
+    .pipe(deleteFrom(name))
+    .pipe(writeStream)
+    readStream.on('end', () => {
+        console.log('Finished rummaging through loot bag...');
+    });
+};
 
 // editWriteStream._write = (buffer, _, next) => {
 //     appendFile('../data/bagOloot.json', buffer, (err) => {
@@ -42,10 +55,6 @@ const addToy = (obj) => {
 //         console.log('The data to write was removed from the file.');
 //     });
 //     next();
-// };
-
-// const deleteToy = (obj) => {
-//     createReadStream('../data/bagOloot.json').pipe(deleteFromWriteStream).createWriteStream(obj);
 // };
 
 // const editDelivery = () => {
@@ -60,4 +69,4 @@ const addToy = (obj) => {
 //     createReadStream('../data/bagOloot.json')
 // };
 
-module.exports = { addToy };
+module.exports = { addToy, deleteToy };

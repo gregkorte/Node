@@ -10,10 +10,10 @@ describe('STREAM TESTING', () => {
             isFunction(addToy);
         });
 
-        it('Should return an object', () => {
-            let obj = {'child': 'Billy', 'toy': 'Goat', 'delivered': false};
-            isObject(addToy(obj));
-        })
+        // it('Should return an object', () => {
+        //     let obj = {'child': 'Billy', 'toy': 'Goat', 'delivered': false};
+        //     isObject(addToy(obj));
+        // })
         
     });
 

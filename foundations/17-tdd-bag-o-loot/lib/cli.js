@@ -8,5 +8,3 @@ const { argv: [,,func,...args] } = process;
 if (func === 'lootHelp'){
     lootHelp();
 } else loot[func](args);
-
-console.log(loot.getAll());

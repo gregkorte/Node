@@ -1,33 +1,23 @@
 {
 	"children": [
 		{
-			"name": "Tommy",
+			"child": "Tommy",
 			"toy": "Gun",
 			"delivered": false
 		},
 		{
-			"name": "Annan",
-			"toy": "Dolly",
-			"delivered": false
-		},
-		{
-			"name": "Roger",
+			"child": "Roger",
 			"toy": "Pig",
 			"delivered": false
 		},
 		{
-			"child": "Billy",
-			"toy": "Goat",
+			"child": "Annan",
+			"toy": "Dolly",
 			"delivered": false
 		},
 		{
-			"child": "Billy",
-			"toy": "Goat",
-			"delivered": false
-		},
-		{
-			"child": "Billy",
-			"toy": "Goat",
+			"child": "Anna",
+			"toy": "Dolly",
 			"delivered": false
 		}
 	]

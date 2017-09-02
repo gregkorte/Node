@@ -1,28 +1,23 @@
 #!node
 'use strict';
 
-const { addToy } = require('./stream');
+const { addToy, deleteToy } = require('./stream');
 
 const loot = {};
 let lootBag = {};
 lootBag.children = [];
 
 loot.add = (arr) => {
-    // let obj = {'child': arr[0], 'toy': arr[1], 'delivered': false};
-    // lootBag.children.push(obj);
-    return
-    addToy(arr)
-    .then((obj) => {
-        // console.log('addTo resolved:', obj)
-    })
+    let object = {
+        "child": arr[0],
+        "toy": arr[1],
+        "delivered": false
+    }
+    addToy(object);
 };
 
-loot.remove = (name) => {
-    lootBag.children.forEach((item, index, object) => {
-        if (item.child === name[0]){
-            object.splice(index, 1);
-        };
-    });
+loot.remove = (arr) => {
+    deleteToy(arr[0]);
 };
 
 loot.getAll = () => {

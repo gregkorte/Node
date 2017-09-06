@@ -34,8 +34,4 @@ loot.listOne = (name) => {
     return getOneToy(name[0])
 };
 
-// loot.clearAll = () => {
-//     let children = getAllToys();
-// };
-
 module.exports = { loot };

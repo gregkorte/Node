@@ -15,7 +15,6 @@ writeStream._write = (json, _, next) => {
     let prettified = JSON.stringify(newFile, null, "\t");
     writeFile('./data/bagOloot.json', prettified, (err) => {
         if(err) throw err;
-        console.log('The data to write was added to the file.');
     });
     next();
 };
@@ -34,7 +33,6 @@ outputWriteStream._write = (buf, _, next) => {
 }
 
 const addToy = (obj) => {
-    console.log('addToy running');
     readStream
     .pipe(addTo(obj))
     .pipe(writeStream)
@@ -44,7 +42,6 @@ const addToy = (obj) => {
 };
 
 const deleteToy = (name) => {
-    console.log('deleteToy running');
     readStream
     .pipe(deleteFrom(name))
     .pipe(writeStream)
@@ -54,7 +51,6 @@ const deleteToy = (name) => {
 };
 
 const editDelivery = (name) => {
-    console.log('editDelivery running');
     readStream
     .pipe(edit(name))
     .pipe(writeStream)
@@ -67,7 +63,7 @@ const getAllToys = () => {
     readStream
     .pipe(all())
     .pipe(outputWriteStream)
-    readStream.on('end', () => {
+    readStream.on('end', () => {   
         console.log('Finished rummaging through loot bag...');
     })
 };

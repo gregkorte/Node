@@ -1,0 +1,21 @@
+{
+  "name": "21b-express-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "db:reset": "node db/build-db",
+    "start": "nodemon bin/express101",
+    "test": "nodemon --exec \"mocha --recursive\" -R list"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.15.4"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "sqlite3": "^3.1.9"
+  }
+}

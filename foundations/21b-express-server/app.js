@@ -20,7 +20,7 @@ app.use('/api/v1/', routes);
 app.use((req, res, next) => {
     let err = new Error('Not Found, dummy');
     err.status = 404;
-    next("This got passed along");
+    next(err);
 })
 
 app.use((err, req, res, next) => {

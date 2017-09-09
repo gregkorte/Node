@@ -31,6 +31,24 @@ let getEgg = (req, res, next) => {
     next();
 };
 
+let errCheck = () => {
+    app.use((req, res, next) => {
+        let err = new Error('Not Found, dummy');
+        err.status = 404;
+        next(err);
+    })
+    
+    app.use((err, req, res, next) => {
+        res.status(err.status || 500);
+        res.json({
+            "message": "You blew it",
+            err: err
+        })
+    })
+    next();
+}
+
 app.use(getEgg)
-app.use(express.static(path.join(__dirname, `public`),{index:false,extensions:['html']}))
+.use(express.static(path.join(__dirname, `public`),{index:false,extensions:['html']}))
+.use(errCheck)
 .listen(port);

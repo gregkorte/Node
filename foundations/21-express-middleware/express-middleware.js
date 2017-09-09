@@ -1,17 +1,15 @@
 #!node
 'use strict'
 
-// const { createServer } = require('http');
 const express = require('express');
+const path = require('path');
 const app = express();
-const router = express.Router();
 const port = process.env.PORT || 8080;
 
-let getEgg = ((req, res) => {
-    if(req.url === '/see-our-eggs'){
-    let d = new Date();
-    let dt = d.toISOString();  
-    console.log(`You found the Easter Egg at ${dt}
+let getEgg = (req, res, next) => {
+    if (req.url.match(/egg/)){
+    let d = new Date().toISOString();  
+    console.log(`You found the Easter Egg at ${d}
     
               ,ggadddd8888888bbbbaaa,_
           ,ad888,      \`Y88,      \`Y888baa,
@@ -30,29 +28,9 @@ let getEgg = ((req, res) => {
           \`"Yb,,_     \`""Y888baa,__,,adP""'
               \`"""YYYY8888888PPPP"""'"`); 
     }
-});
+    next();
+};
 
-app
-.use(express.static(`${__dirname}/public`), router)
-.use(getEgg)
+app.use(getEgg)
+app.use(express.static(path.join(__dirname, `public`),{index:false,extensions:['html']}))
 .listen(port);
-
-router.get('/', (req, res, next) => {
-    res.send('This is the index!!');
-    next();
-});
-
-router.get('/home', (req, res, next) => {
-    res.sendFile(`${__dirname}/public/home.html`);
-    next();
-})
-
-router.get('/see-our-chickens', (req, res, next) => {
-    res.sendFile(`${__dirname}/public/see-our-chickens.html`);
-    next();
-})
-
-router.get('/see-our-eggs', (req, res, next) => { 
-    res.sendFile(`${__dirname}/public/see-our-eggs.html`);
-    next();
-})
